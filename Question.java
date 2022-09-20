@@ -1,7 +1,10 @@
 public class Question
 {
+    //MC questions
     private char[] multiChoice;
     private int mcAnswer;
+
+    //True false questions
     private boolean trueFalse;
     private boolean trueFalseAnswer;
 
