@@ -1,4 +1,4 @@
-public class Student implements Answers
+public class Student
 {
     
 }

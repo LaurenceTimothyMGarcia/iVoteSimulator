@@ -1,12 +1,14 @@
-public class Question implements Answers
+public class Question
 {
     private char[] multiChoice;
     private int mcAnswer;
     private boolean trueFalse;
+    private boolean trueFalseAnswer;
 
-    public Question(boolean tF)
+    public Question(boolean tF, boolean tfAnswer)
     {
         trueFalse = tF;
+        trueFalseAnswer = tfAnswer;
     }
 
     public Question(char[] mc, int answer)
@@ -28,5 +30,20 @@ public class Question implements Answers
     public boolean getTrueFalse()
     {
         return trueFalse;
+    }
+
+    public boolean getTFAnswer()
+    {
+        return trueFalseAnswer;
+    }
+
+    public void setAnswer(int mcAns)
+    {
+        mcAnswer = mcAns;
+    }
+
+    public void setAnswer(boolean tfAns)
+    {
+        trueFalseAnswer = tfAns;
     }
 }
