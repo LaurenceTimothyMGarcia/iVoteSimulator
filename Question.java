@@ -1,5 +1,7 @@
-public class Question
+public interface Question
 {
+//No need for answer
+
     //MC questions
     private char[] multiChoice;
     private int mcAnswer;
