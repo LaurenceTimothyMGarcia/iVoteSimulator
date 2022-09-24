@@ -3,10 +3,17 @@ public class QuestionTF implements Question
     private String[] choiceTF = {"1. True", "2. False"};
     private int[] counterTF = {0, 0};
 
+    private String question;
+
+    public QuestionTF(String quest)
+    {
+        question = quest;
+    }
+
     //Prints the question for display for the user
     public void PrintQuestion()
     {
-
+        System.out.println(question);
     }
 
     //Displays the choices for the user

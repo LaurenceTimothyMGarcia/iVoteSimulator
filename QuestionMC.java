@@ -3,10 +3,17 @@ public class QuestionMC implements Question
     private String[] choiceMC = {"A", "B", "C", "D", "E", "F"};
     private int[] counterMC = {0, 0, 0, 0, 0, 0};
 
+    private String question;
+
+    public QuestionMC(String quest)
+    {
+        question = quest;
+    }
+
     //Prints the question for display for the user
     public void PrintQuestion()
     {
-
+        System.out.println(question);
     }
 
     //Displays the choices for the user
