@@ -10,13 +10,13 @@ public class QuestionTF implements Question
     }
 
     //Prints the question for display for the user
-    public void PrintQuestion()
+    public void printQuestion()
     {
         System.out.println(question);
     }
 
     //Displays the choices for the user
-    public void PrintChoice()
+    public void printChoice()
     {
         System.out.println("True or False?");
 
@@ -25,8 +25,12 @@ public class QuestionTF implements Question
     }
 
     //Accessor Methods
-    public String GetChoice(int numInArr)
+    public String getChoice(int numInArr)
     {
         return choiceTF[numInArr];
+    }
+    public String[] getOptions()
+    {
+        return choiceTF;
     }
 }

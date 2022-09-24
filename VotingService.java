@@ -3,25 +3,33 @@ import java.util.*;
 public class VotingService
 {
     //Holds all the id strings
+    private ArrayList<Student> studentsList = new ArrayList<Student>();
     private ArrayList<String> uniqueID = new ArrayList<String>();
+
+    private QuestionTF trueFalse;
+    private QuestionMC multipleChoice;
 
     private int[] counter;
     private final int[] countTF = {0, 0};
     private final int[] countMC = {0, 0, 0, 0, 0, 0};
 
     //Voting Service differs depending on type of question
-    public VotingService(QuestionTF tf) //True and false
+    public VotingService(ArrayList<Student> stud, QuestionTF tf) //True and false
     {
+        studentsList = stud;
+        trueFalse = tf;
         counter = countTF;
     }
     
-    public VotingService(QuestionMC mc) //Multiple select/choice
+    public VotingService(ArrayList<Student> stud, QuestionMC mc) //Multiple select/choice
     {
+        studentsList = stud;
+        multipleChoice = mc;
         counter = countMC;
     }
 
     //Prints out the results of how many students answered each one
-    public void SubmissionResults(int[] counter, String[] questionChoice)
+    public void submissionResults(int[] counter, String[] questionChoice)
     {
         for (int i = 0; i < questionChoice.length; i++)
         {
@@ -30,7 +38,7 @@ public class VotingService
     }
 
     //Add counter methods
-    public void AddCounter(boolean tfAnswer)    //True and false
+    public void addCounter(boolean tfAnswer)    //True and false
     {
         if (tfAnswer)
         {
@@ -42,7 +50,7 @@ public class VotingService
         }
     }
 
-    public void AddCounter(boolean[] mcAnswer)  //Multiple Choice
+    public void addCounter(boolean[] mcAnswer)  //Multiple Choice
     {
         for (int i = 0; i < mcAnswer.length; i++)
         {
@@ -51,5 +59,11 @@ public class VotingService
                 counter[i]++;
             }
         }
+    }
+
+    //Accessor Methods
+    public int[] getCounter()
+    {
+        return counter;
     }
 }

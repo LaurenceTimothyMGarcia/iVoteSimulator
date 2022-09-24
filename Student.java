@@ -7,7 +7,7 @@ public class Student
     private String studentID;
 
     //Have the student call random answer using random bool and random boolean[] function
-    private boolean[] mcAnswer;
+    private boolean[] mcAnswer = new boolean[6];
     private boolean tfAnswer;
 
     public Student()
