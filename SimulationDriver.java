@@ -7,8 +7,8 @@ public class SimulationDriver
 {
     public static void main(String args[])
     {
-        String[] q1 = Question.multiChoice;
-        String[] q2 = Question.trueFalse;
+        String[] q1;
+        String[] q2;
 
         
     }

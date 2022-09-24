@@ -1,10 +1,11 @@
 public interface Question
 {
-    //MC questions
-    public final String[] multiChoice = {"A", "B", "C", "D", "E", "F"};
+    //Prints the question for display for the user
+    public void PrintQuestion();
 
-    //True false questions
-    public final String[] trueFalse = {"1. True", "2. False"};
+    //Displays the choices for the user
+    public void PrintChoice();
 
-    public void printChoice(String[] questionChoice);
+    //Counts how many times a student selected that number
+    public void AddCounter();
 }
