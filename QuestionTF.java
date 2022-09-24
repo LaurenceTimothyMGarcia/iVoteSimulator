@@ -26,19 +26,13 @@ public class QuestionTF implements Question
     }
 
     //Counts how many times a student selected that number
-    public void AddCounter(boolean[] selected)
+    @Override public void AddCounter(boolean selected)
     {
-        //Input validation to check if only one is selected
-        if (selected[0] == selected[1])
-        {
-            return;
-        }
-
-        if (selected[0])
+        if (selected)
         {
             counterTF[0]++;
         }
-        else if (selected[1])
+        else
         {
             counterTF[1]++;
         }

@@ -2,16 +2,16 @@ public class Student
 {
     private String studentID;
 
-    private String mcAnswer;
-    private int tfAnswer;
+    private boolean[] mcAnswer;
+    private boolean tfAnswer;
 
-    public Student(String id, String mc)
+    public Student(String id, boolean[] mc)
     {
         studentID = id;
         mcAnswer = mc;
     }
 
-    public Student(String id, int tf)
+    public Student(String id, boolean tf)
     {
         studentID = id;
         tfAnswer = tf;
@@ -22,22 +22,22 @@ public class Student
         return studentID;
     }
 
-    public String getMCAnswer()
+    public boolean[] getMCAnswer()
     {
         return mcAnswer;
     }
 
-    public int getTFAnswer()
+    public boolean getTFAnswer()
     {
         return tfAnswer;
     }
 
-    public void setMCAnswer(String mc)
+    public void setMCAnswer(boolean[] mc)
     {
         mcAnswer = mc;
     }
 
-    public void setTFAnswer(int tf)
+    public void setTFAnswer(boolean tf)
     {
         tfAnswer = tf;
     }
