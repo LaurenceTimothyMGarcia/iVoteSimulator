@@ -10,13 +10,12 @@ public class VotingService
     private final int[] countMC = {0, 0, 0, 0, 0, 0};
 
     //Voting Service differs depending on type of question
-    //True and false
-    public VotingService(QuestionTF tf)
+    public VotingService(QuestionTF tf) //True and false
     {
         counter = countTF;
     }
-    //Multiple select/choice
-    public VotingService(QuestionMC mc)
+    
+    public VotingService(QuestionMC mc) //Multiple select/choice
     {
         counter = countMC;
     }
