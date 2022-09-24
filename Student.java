@@ -2,20 +2,33 @@ public class Student
 {
     private String studentID;
 
-    private String mcChoice;
-    private int tfChoice;
+    private String mcAnswer;
+    private int tfAnswer;
 
     public void Student(String id, String mc)
     {
         studentID = id;
-        mcChoice = mc;
+        mcAnswer = mc;
     }
 
     public void Student(String id, int tf)
     {
         studentID = id;
-        tfChoice = tf;
+        tfAnswer = tf;
     }
 
+    public String getID()
+    {
+        return studentID;
+    }
 
+    public String getMCAnswer()
+    {
+        return mcAnswer;
+    }
+
+    public int getTFAnswer()
+    {
+        return tfAnswer;
+    }
 }
