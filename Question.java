@@ -7,7 +7,7 @@ public interface Question
     public void PrintChoice();
 
     //Counts how many times a student selected that number
-    public void AddCounter();
+    public void AddCounter(boolean[] selected);
 
     //Accessor Methods
     public String GetChoice(int numInArr);

@@ -21,9 +21,17 @@ public class QuestionMC implements Question
     }
 
     //Counts how many times a student selected that number
-    public void AddCounter()
+    public void AddCounter(boolean[] selected)
     {
+        //Place some form of input validation here
 
+        for (int i = 0; i < selected.length; i++)
+        {
+            if (selected[i])
+            {
+                counterMC[i]++;
+            }
+        }
     }
 
     //Accessor Methods
