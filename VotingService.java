@@ -31,10 +31,12 @@ public class VotingService
     //Prints out the results of how many students answered each one
     public void submissionResults(int[] counter, String[] questionChoice)
     {
+        System.out.println("\nResults");
         for (int i = 0; i < questionChoice.length; i++)
         {
             System.out.println(questionChoice[i] + " : " + counter[i]);
         }
+        System.out.println();
     }
 
     //Add counter methods

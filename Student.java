@@ -88,4 +88,10 @@ public class Student
     {
         tfAnswer = tf;
     }
+
+    public void randomizeAnswer()
+    {
+        mcAnswer = randomMC();
+        tfAnswer = randomTF();
+    }
 }

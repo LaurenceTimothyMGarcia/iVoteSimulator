@@ -31,16 +31,34 @@ public class SimulationDriver
             studentArr.add(new Student());
         }
 
+        //Question 1
         VotingService voteQ1 = new VotingService(studentArr, q1);
         q1.printQuestion();
         q1.printChoice();
-
         for (int i = 0; i < studentArr.size(); i++)
         {
             voteQ1.addCounter(studentArr.get(i).getMCAnswer());
         }
-
         voteQ1.submissionResults(voteQ1.getCounter(), q1.getOptions());
+        //Randomize for new answers
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            studentArr.get(i).randomizeAnswer();
+        }
 
+        //Question 2
+        VotingService voteQ2 = new VotingService(studentArr, q2);
+        q2.printQuestion();
+        q2.printChoice();
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            voteQ2.addCounter(studentArr.get(i).getTFAnswer());
+        }
+        voteQ2.submissionResults(voteQ2.getCounter(), q2.getOptions());
+        //Randomize for new answers
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            studentArr.get(i).randomizeAnswer();
+        }
     }
 }
