@@ -6,5 +6,5 @@ public interface Question
     //True false questions
     public final String[] trueFalse = {"1. True", "2. False"};
 
-    public void printChoice();
+    public void printChoice(String[] questionChoice);
 }
