@@ -60,5 +60,65 @@ public class SimulationDriver
         {
             studentArr.get(i).randomizeAnswer();
         }
+
+        //Question 3
+        VotingService voteQ3 = new VotingService(studentArr, q3);
+        q3.printQuestion();
+        q3.printChoice();
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            voteQ3.addCounter(studentArr.get(i).getMCAnswer());
+        }
+        voteQ3.submissionResults(voteQ3.getCounter(), q3.getOptions());
+        //Randomize for new answers
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            studentArr.get(i).randomizeAnswer();
+        }
+
+        //Question 4
+        VotingService voteQ4 = new VotingService(studentArr, q4);
+        q4.printQuestion();
+        q4.printChoice();
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            voteQ4.addCounter(studentArr.get(i).getMCAnswer());
+        }
+        voteQ4.submissionResults(voteQ4.getCounter(), q4.getOptions());
+        //Randomize for new answers
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            studentArr.get(i).randomizeAnswer();
+        }
+
+        //Question 5
+        VotingService voteQ5 = new VotingService(studentArr, q5);
+        q5.printQuestion();
+        q5.printChoice();
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            voteQ5.addCounter(studentArr.get(i).getTFAnswer());
+        }
+        voteQ5.submissionResults(voteQ5.getCounter(), q5.getOptions());
+        //Randomize for new answers
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            studentArr.get(i).randomizeAnswer();
+        }
+
+        //Question 6
+        VotingService voteQ6 = new VotingService(studentArr, q6);
+        q6.printQuestion();
+        q6.printChoice();
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            voteQ6.addCounter(studentArr.get(i).getTFAnswer());
+        }
+        voteQ6.submissionResults(voteQ6.getCounter(), q6.getOptions());
+        //Randomize for new answers
+        for (int i = 0; i < studentArr.size(); i++)
+        {
+            studentArr.get(i).randomizeAnswer();
+        }
     }
 }
