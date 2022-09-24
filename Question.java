@@ -6,10 +6,6 @@ public interface Question
     //Displays the choices for the user
     public void PrintChoice();
 
-    //Counts how many times a student selected that number
-    public void AddCounter(boolean[] selected);
-
     //Accessor Methods
     public String GetChoice(int numInArr);
-    public int GetCounter(int numInArr);
 }

@@ -1,7 +1,6 @@
 public class QuestionMC implements Question
 {
     private String[] choiceMC = {"A", "B", "C", "D", "E", "F"};
-    private int[] counterMC = {0, 0, 0, 0, 0, 0};
 
     private String question;
 
@@ -27,28 +26,9 @@ public class QuestionMC implements Question
         }
     }
 
-    //Counts how many times a student selected that number
-    public void AddCounter(boolean[] selected)
-    {
-        //Place some form of input validation here
-
-        for (int i = 0; i < selected.length; i++)
-        {
-            if (selected[i])
-            {
-                counterMC[i]++;
-            }
-        }
-    }
-
     //Accessor Methods
     public String GetChoice(int numInArr)
     {
         return choiceMC[numInArr];
-    }
-
-    public int GetCounter(int numInArr)
-    {
-        return counterMC[numInArr];
     }
 }
