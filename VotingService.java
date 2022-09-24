@@ -3,13 +3,14 @@ public class VotingService implements Question
     private int[] mcCounter = {0, 0, 0, 0, 0, 0};
     private int[] tfCounter = {0, 0};
 
+    private String[] unqiueID;
     private Student studentAns;
 
-    public void AddCounter(String mc)
+    public void AddCounter(String id, String mc)
     {
         for (int i = 0; i < multiChoice.length; i++)
         {
-            if (multiChoice[i] == studentAns.getMCAnswer())
+            if (multiChoice[i] == mc)
             {
                 mcCounter[i]++;
                 break;
@@ -17,15 +18,15 @@ public class VotingService implements Question
         }
     }
 
-    public void AddCounter(int tf)
+    public void AddCounter(String id, int tf)
     {
-        for (int i = 0; i < tfCounter.length; i++)
+        if (tf == 1)
         {
-            if (i == studentAns.getTFAnswer())
-            {
-                tfCounter[i]++;
-                break;
-            }
+            tfCounter[0]++;
+        }
+        else if (tf == 2)
+        {
+            tfCounter[1]++;
         }
     }
 
@@ -33,7 +34,7 @@ public class VotingService implements Question
     {
         for (int i = 0; i < questionChoice.length; i++)
         {
-            System.out.println(questionChoice[i] + " " + counter[i]);
+            System.out.println(questionChoice[i] + " : " + counter[i]);
         }
     }
 

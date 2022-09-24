@@ -31,4 +31,14 @@ public class Student
     {
         return tfAnswer;
     }
+
+    public void setMCAnswer(String mc)
+    {
+        mcAnswer = mc;
+    }
+
+    public void setTFAnswer(int tf)
+    {
+        tfAnswer = tf;
+    }
 }
