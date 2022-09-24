@@ -5,13 +5,13 @@ public class Student
     private String mcAnswer;
     private int tfAnswer;
 
-    public void Student(String id, String mc)
+    public Student(String id, String mc)
     {
         studentID = id;
         mcAnswer = mc;
     }
 
-    public void Student(String id, int tf)
+    public Student(String id, int tf)
     {
         studentID = id;
         tfAnswer = tf;

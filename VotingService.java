@@ -3,7 +3,31 @@ public class VotingService implements Question
     private int[] mcCounter = {0, 0, 0, 0, 0, 0};
     private int[] tfCounter = {0, 0};
 
-    private Student studentAns = new Student();
+    private Student studentAns;
+
+    public void AddCounter(String mc)
+    {
+        for (int i = 0; i < multiChoice.length; i++)
+        {
+            if (multiChoice[i] == studentAns.getMCAnswer())
+            {
+                mcCounter[i]++;
+                break;
+            }
+        }
+    }
+
+    public void AddCounter(int tf)
+    {
+        for (int i = 0; i < tfCounter.length; i++)
+        {
+            if (i == studentAns.getTFAnswer())
+            {
+                tfCounter[i]++;
+                break;
+            }
+        }
+    }
 
     public void SubmissionResults(int[] counter, String[] questionChoice)
     {
