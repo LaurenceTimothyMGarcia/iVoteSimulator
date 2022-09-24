@@ -8,4 +8,8 @@ public interface Question
 
     //Counts how many times a student selected that number
     public void AddCounter();
+
+    //Accessor Methods
+    public String GetChoice(int numInArr);
+    public int GetCounter(int numInArr);
 }
