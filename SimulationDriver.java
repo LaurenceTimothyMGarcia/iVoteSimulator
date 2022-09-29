@@ -16,6 +16,9 @@ public class SimulationDriver
         int numOfStudents = kb.nextInt();
         kb.close();
 
+        //Unique ID Validation
+        StudentIDValid idValid = new StudentIDValid();
+
         //List of questions
         QuestionMC q1 = new QuestionMC("What is an interface?");
         QuestionTF q2 = new QuestionTF("Overwatch was created by Riot Games.");
@@ -29,6 +32,7 @@ public class SimulationDriver
         for (int i = 0; i < numOfStudents; i++)
         {
             studentArr.add(new Student());
+            idValid.reinputAnswer(studentArr, studentArr.get(studentArr.size()-1));
         }
 
         //Question 1
