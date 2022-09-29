@@ -14,21 +14,18 @@ public class Student
     private String studentID;
 
     //Have the student call random answer using random bool and random boolean[] function
-    private boolean[] mcAnswer = new boolean[6];
-    private boolean tfAnswer;
+    private boolean[] answer = new boolean[6];
 
     public Student()
     {
         studentID = randomID();
-        mcAnswer = randomMC();
-        tfAnswer = randomTF();
+        answer = randomMC();
     }
 
-    public Student(String id, boolean[] mc, boolean tf)
+    public Student(String id, boolean[] ans)
     {
         studentID = id;
-        mcAnswer = mc;
-        tfAnswer = tf;
+        answer = ans;
     }
 
     private String randomID()
@@ -60,7 +57,7 @@ public class Student
 
     private boolean[] randomMC()
     {
-        boolean[] mc = new boolean[mcAnswer.length];
+        boolean[] mc = new boolean[answer.length];
 
         for (int i = 0; i < mc.length; i++)
         {
@@ -78,27 +75,27 @@ public class Student
 
     public boolean[] getMCAnswer()
     {
-        return mcAnswer;
+        return answer;
     }
 
     public boolean getTFAnswer()
     {
-        return tfAnswer;
+        return answer[0];
     }
 
     public void setMCAnswer(boolean[] mc)
     {
-        mcAnswer = mc;
+        answer = mc;
     }
 
     public void setTFAnswer(boolean tf)
     {
-        tfAnswer = tf;
+        answer[0] = tf;
     }
 
     public void randomizeAnswer()
     {
-        mcAnswer = randomMC();
-        tfAnswer = randomTF();
+        answer = randomMC();
+        answer[0] = randomTF();
     }
 }

@@ -6,13 +6,19 @@
 
 public class QuestionMC implements Question
 {
-    private String[] choiceMC = {"A", "B", "C", "D", "E", "F"};
+    private String[] choiceMC = new String[6];
 
     private String question;
 
-    public QuestionMC(String quest)
+    public QuestionMC(String quest, String a1, String a2, String a3, String a4, String a5, String a6)
     {
         question = quest;
+        choiceMC[0] = a1;
+        choiceMC[1] = a2;
+        choiceMC[2] = a3;
+        choiceMC[3] = a4;
+        choiceMC[4] = a5;
+        choiceMC[5] = a6;
     }
 
     //Prints the question for display for the user

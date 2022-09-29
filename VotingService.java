@@ -35,6 +35,41 @@ public class VotingService
         counter = countMC;
     }
 
+
+    /*** Method to process votes ***/
+    public void votingProcessMC()
+    {
+        multipleChoice.printQuestion();
+        multipleChoice.printChoice();
+        for (int i = 0; i < studentsList.size(); i++)
+        {
+            addCounter(studentsList.get(i).getMCAnswer());
+        }
+        submissionResults(counter, multipleChoice.getOptions());
+        //Randomize for new answers
+        for (int i = 0; i < studentsList.size(); i++)
+        {
+            studentsList.get(i).randomizeAnswer();
+        }
+    }
+
+    public void votingProcessTF()
+    {
+        trueFalse.printQuestion();
+        trueFalse.printChoice();
+        for (int i = 0; i < studentsList.size(); i++)
+        {
+            addCounter(studentsList.get(i).getTFAnswer());
+        }
+        submissionResults(counter, trueFalse.getOptions());
+
+        //Randomize for new answers
+        for (int i = 0; i < studentsList.size(); i++)
+        {
+            studentsList.get(i).randomizeAnswer();
+        }
+    }
+
     //Prints out the results of how many students answered each one
     public void submissionResults(int[] counter, String[] questionChoice)
     {
