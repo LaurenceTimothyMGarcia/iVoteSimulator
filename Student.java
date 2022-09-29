@@ -19,7 +19,7 @@ public class Student
     public Student()
     {
         studentID = randomID();
-        answer = randomMC();
+        answer = randomAnswer();
     }
 
     public Student(String id, boolean[] ans)
@@ -55,7 +55,7 @@ public class Student
         }
     }
 
-    private boolean[] randomMC()
+    public boolean[] randomAnswer()
     {
         boolean[] mc = new boolean[answer.length];
 
@@ -73,29 +73,13 @@ public class Student
         return studentID;
     }
 
-    public boolean[] getMCAnswer()
+    public boolean[] getAnswer()
     {
         return answer;
     }
 
-    public boolean getTFAnswer()
-    {
-        return answer[0];
-    }
-
-    public void setMCAnswer(boolean[] mc)
+    public void setAnswer(boolean[] mc)
     {
         answer = mc;
-    }
-
-    public void setTFAnswer(boolean tf)
-    {
-        answer[0] = tf;
-    }
-
-    public void randomizeAnswer()
-    {
-        answer = randomMC();
-        answer[0] = randomTF();
     }
 }

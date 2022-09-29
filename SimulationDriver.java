@@ -23,9 +23,6 @@ public class SimulationDriver
         int numOfStudents = kb.nextInt();
         kb.close();
 
-        //Unique ID Validation
-        StudentIDValid idValid = new StudentIDValid();
-
         //List of questions
         QuestionMC q1 = new QuestionMC("What is an interface?", "A. An abstract type", "B. A variable", "C. An integer", "D. An Android APP", "E. A class at CPP", "F. A Videogame");
         QuestionTF q2 = new QuestionTF("Overwatch was created by Riot Games.");
@@ -35,11 +32,12 @@ public class SimulationDriver
         QuestionTF q6 = new QuestionTF("Batman is based off of a bat.");
 
         //Students
-        ArrayList<Student> studentArr = new ArrayList<Student>();
+        HashMap<String, boolean[]> studentArr = new HashMap<String, boolean[]>();
         for (int i = 0; i < numOfStudents; i++)
         {
-            studentArr.add(new Student());
-            idValid.reinputAnswer(studentArr, studentArr.get(studentArr.size()-1));
+            Student student = new Student();
+
+            studentArr.put(student.getID(), student.getAnswer());
         }
 
         //Question 1

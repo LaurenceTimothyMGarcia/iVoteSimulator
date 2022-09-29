@@ -10,8 +10,8 @@ import java.util.*;
 public class VotingService
 {
     //Holds all the id strings
-    private ArrayList<Student> studentsList = new ArrayList<Student>();
-    private ArrayList<String> uniqueID = new ArrayList<String>();
+    private HashMap<String, boolean[]> studentsList = new HashMap<String, boolean[]>();
+    private Student randomAnswer = new Student();
 
     private QuestionTF trueFalse;
     private QuestionMC multipleChoice;
@@ -21,14 +21,14 @@ public class VotingService
     private final int[] countMC = {0, 0, 0, 0, 0, 0};
 
     //Voting Service differs depending on type of question
-    public VotingService(ArrayList<Student> stud, QuestionTF tf) //True and false
+    public VotingService(HashMap<String, boolean[]> stud, QuestionTF tf) //True and false
     {
         studentsList = stud;
         trueFalse = tf;
         counter = countTF;
     }
     
-    public VotingService(ArrayList<Student> stud, QuestionMC mc) //Multiple select/choice
+    public VotingService(HashMap<String, boolean[]> stud, QuestionMC mc) //Multiple select/choice
     {
         studentsList = stud;
         multipleChoice = mc;
@@ -41,15 +41,16 @@ public class VotingService
     {
         multipleChoice.printQuestion();
         multipleChoice.printChoice();
-        for (int i = 0; i < studentsList.size(); i++)
+        for (Map.Entry<String, boolean[]> set : studentsList.entrySet())
         {
-            addCounter(studentsList.get(i).getMCAnswer());
+            addCounter(set.getValue());
         }
         submissionResults(counter, multipleChoice.getOptions());
+
         //Randomize for new answers
-        for (int i = 0; i < studentsList.size(); i++)
+        for (Map.Entry<String, boolean[]> set : studentsList.entrySet())
         {
-            studentsList.get(i).randomizeAnswer();
+            studentsList.put(set.getKey(), randomAnswer.randomAnswer());
         }
     }
 
@@ -57,16 +58,16 @@ public class VotingService
     {
         trueFalse.printQuestion();
         trueFalse.printChoice();
-        for (int i = 0; i < studentsList.size(); i++)
+        for (Map.Entry<String, boolean[]> set : studentsList.entrySet())
         {
-            addCounter(studentsList.get(i).getTFAnswer());
+            addCounter(set.getValue()[0]);
         }
         submissionResults(counter, trueFalse.getOptions());
 
         //Randomize for new answers
-        for (int i = 0; i < studentsList.size(); i++)
+        for (Map.Entry<String, boolean[]> set : studentsList.entrySet())
         {
-            studentsList.get(i).randomizeAnswer();
+            studentsList.put(set.getKey(), randomAnswer.randomAnswer());
         }
     }
 

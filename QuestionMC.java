@@ -24,6 +24,7 @@ public class QuestionMC implements Question
     //Prints the question for display for the user
     public void printQuestion()
     {
+        System.out.println("--------------------------------");
         System.out.println(question);
     }
 
