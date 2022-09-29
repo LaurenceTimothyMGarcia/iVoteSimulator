@@ -1,3 +1,10 @@
+/***
+ * 
+ * Voting Service Class
+ *      Handles the students' answers and prints it
+ * 
+***/
+
 import java.util.*;
 
 public class VotingService

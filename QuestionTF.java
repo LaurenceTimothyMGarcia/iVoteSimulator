@@ -1,3 +1,9 @@
+/***
+ * 
+ * Question True and False Subclass
+ * 
+***/
+
 public class QuestionTF implements Question
 {
     private String[] choiceTF = {"1. True", "2. False"};

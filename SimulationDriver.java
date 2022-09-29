@@ -3,6 +3,13 @@
 //CS 3560
 //Professor Yu Sun
 
+/***
+ * 
+ * Main Driver
+ *      Runs code and randomizes student and their answers
+ * 
+***/
+
 import java.util.*;
 import java.io.*;
 

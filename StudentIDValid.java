@@ -1,3 +1,10 @@
+/***
+ * 
+ * Unique Student ID Validation
+ *      Validates the student id, if the same it just places the students answer instead of creating a new student
+ * 
+***/
+
 import java.util.*;
 
 public class StudentIDValid 

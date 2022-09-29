@@ -1,3 +1,10 @@
+/***
+ * 
+ * Student Class
+ *      Holds all information for a single student
+ * 
+***/
+
 import java.util.Random;
 
 public class Student

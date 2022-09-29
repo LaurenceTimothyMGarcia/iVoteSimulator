@@ -1,3 +1,9 @@
+/***
+ * 
+ * Question Interface
+ * 
+***/
+
 public interface Question
 {
     //Prints the question for display for the user

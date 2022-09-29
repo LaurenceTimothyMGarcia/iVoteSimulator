@@ -1,3 +1,9 @@
+/***
+ * 
+ * Question Multiple Choice Subclass
+ * 
+***/
+
 public class QuestionMC implements Question
 {
     private String[] choiceMC = {"A", "B", "C", "D", "E", "F"};
@@ -15,7 +21,7 @@ public class QuestionMC implements Question
         System.out.println(question);
     }
 
-    //Displays the choices for the user
+    //Displays the choices for the user; From A-F
     public void printChoice()
     {
         System.out.println("Pick one or more of the following");
