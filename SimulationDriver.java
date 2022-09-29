@@ -17,6 +17,7 @@ public class SimulationDriver
 {
     public static void main(String args[])
     {
+        //Initial scanner for prompt
         Scanner kb = new Scanner(System.in);
 
         System.out.print("How many students are there? ");
@@ -32,7 +33,7 @@ public class SimulationDriver
         QuestionTF q6 = new QuestionTF("Batman is based off of a bat.");
 
         //Students
-        HashMap<String, boolean[]> studentArr = new HashMap<String, boolean[]>();
+        HashMap<String, boolean[]> studentArr = new HashMap<String, boolean[]>();   //Used hashmap to ensure each student is a unique id
         for (int i = 0; i < numOfStudents; i++)
         {
             Student student = new Student();

@@ -16,6 +16,7 @@ public class VotingService
     private QuestionTF trueFalse;
     private QuestionMC multipleChoice;
 
+    //Counters to show prints
     private int[] counter;
     private final int[] countTF = {0, 0};
     private final int[] countMC = {0, 0, 0, 0, 0, 0};
