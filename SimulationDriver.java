@@ -32,7 +32,7 @@ public class SimulationDriver
         QuestionTF q5 = new QuestionTF("Apple creates Samsung Phones");
         QuestionTF q6 = new QuestionTF("Batman is based off of a bat.");
 
-        //Students
+        //Student hashmap
         HashMap<String, boolean[]> studentArr = new HashMap<String, boolean[]>();   //Used hashmap to ensure each student is a unique id
         for (int i = 0; i < numOfStudents; i++)
         {
