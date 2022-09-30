@@ -9,14 +9,14 @@ import java.util.*;
 
 public class VotingService
 {
-    //Holds all the id strings
+    //Holds all the id strings as keys and student answers as boolean arrays
     private HashMap<String, boolean[]> studentsList = new HashMap<String, boolean[]>();
     private Student randomAnswer = new Student();
 
     private QuestionTF trueFalse;
     private QuestionMC multipleChoice;
 
-    //Counters to show prints
+    //Counters to show results
     private int[] counter;
     private final int[] countTF = {0, 0};
     private final int[] countMC = {0, 0, 0, 0, 0, 0};
